@@ -1,0 +1,24 @@
+<a href="{% url 'home' %}">Home</a>
+<a href="{% url 'about' %}">About</a>
+	
+<h1>Entered text was of length {{ fulltext_len }}</h1>
+
+<hr/>
+<h3>Entered text was : </h3><br/>
+{{ fulltext }}
+
+<hr/>
+
+<table>
+	<tr>
+		<th>Word</th>
+		<th>Occurences</th>
+	</tr>
+	{% for word, count in fulltext_dict %}
+		<tr>
+			<td><strong>{{ word }}</strong> </td>
+			<td>{{ count }}</td>
+		</tr>
+	{% endfor %}
+
+</table>

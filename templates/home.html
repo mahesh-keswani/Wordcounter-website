@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Wordcount Project</title>
+</head>
+<body>
+	
+	<h1>Word Count Website</h1>
+	<a href="{% url 'home' %}">Home</a>
+	<a href="{% url 'about' %}">About</a>
+	
+	<h1>Home</h1>
+	<hr>
+	<form action="{% url 'count' %}">	
+		<textarea rows="15" cols="40" name="fulltext"></textarea><br/>
+		<input type="submit" name="submit" value="Count the words">
+	</form>
+	
+</body>
+</html>
